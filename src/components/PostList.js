@@ -6,7 +6,7 @@ import UserHeader from './UserHeader';
 
 class PostList extends React.Component {
 	componentDidMount() {
-		this.props.fetchPost();
+		this.props.fetchPostsAndUsers();
 	}
 
 	renderPostList = () => {
@@ -34,7 +34,7 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => ({
-	fetchPost: () => dispatch(actions.fetchPost())
+	fetchPostsAndUsers: () => dispatch(actions.fetchPostsAndUsers())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(PostList);
